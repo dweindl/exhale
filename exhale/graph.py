@@ -2003,7 +2003,7 @@ class ExhaleRoot(object):
                 parameters = []
                 for param in memberdef.find_all("param", recursive=False):
                     declname = ""
-                    if hasattr(param, "declname"):
+                    if hasattr(param, "declname") and param.declname:
                         declname = param.declname.text
                     # if "operator" not in func.name:
                     #     parameters.append(param.type.text)
