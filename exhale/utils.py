@@ -551,9 +551,9 @@ def specificationsForKind(kind):
 
     # otherwise, just provide class and struct
     if kind == "class" or kind == "struct":
-        return [":members:", ":protected-members:", ":undoc-members:"]
+        return [":members:", ":protected-members:", ":undoc-members:", f":path: {configs._doxygen_xml_output_directory}"]
 
-    return []  # use breathe defaults
+    return [f":path: {configs._doxygen_xml_output_directory}"]  # use breathe defaults
 
 
 class AnsiColors:
